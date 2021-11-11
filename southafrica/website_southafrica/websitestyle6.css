@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding: 0;	
+    background-color: #3a979f;;
+}
+
+.wrapper
+{
+	width:100%;
+        
+}
+
+.img-head
+{
+	display: None;
+
+} 
+.img-headinfo
+{
+   width:100%; 
+}
+
+li
+{
+   background-color:white;
+   
+}
+/*
+aside
+{
+    width: 50%;
+    float:right;
+    padding-right: 7px;
+    background-color: black;
+ }
+*/
+
+/*
+kod från inspirationen, men eftersom vi inte ska ha ngn på detta sättet så kan det avmarkeras tills vidare. 
+senare flyttas så den antingen är under eller bredvid filmerna. Det beror på. 
+
+.img-info h2
+{
+   padding: 30px 30px 20px;
+   font-family: arial;
+   font-size: 50px;
+   color:#111;
+   line-height: 44px; 
+}
+
+.img-info p
+{
+   padding: 0px 30px 20px;
+   font-family: arial; 
+   font-size: 16px;
+   color: #111;
+   line-height: 24; 
+}
+*/
+.video
+{
+    /*original var 100%*/
+   width: 200px;
+   height: 100px;
+   padding-left: 50px;
+   padding-top: 20px;
+
+ }
+
+ @media only screen and (min-width: 768px)
+ {
+    .img-head
+    {
+        
+        display: block;
+        width: 100%;
+        padding-bottom: 30px;  
+        padding-top: 7px;
+        padding-left: 7px;
+        padding-right: 7px;  
+    }
+    .wrapper
+{
+	width:600px;
+    margin:0 auto; 
+}
+/*eventuellt lägga till videon .video, deletea width, istället lägga padding-top: 30px; detta för att filmerna ska följa med när vi scalear upp och ner. */
+.video
+{
+	width:500px;
+    height: 200px;
+}
+
+}
+
+ @media only screen and (min-width: 1000px)
+ {
+.wrapper
+{
+	width:1000px;
+
+} 
+.img-head
+{  
+	width: 100%;
+}
+ .video
+{
+    padding-top: 0px;
+    width: 50%;
+    float: left;
+ }
+ .video
+{
+	width:500px;
+    height: 200px;
+}
+
+ }
+
+ 
+
