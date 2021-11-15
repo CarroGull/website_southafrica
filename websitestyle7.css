@@ -26,9 +26,13 @@
     margin-left: 3px;
     float: left;
 } 
+
+
 video
 {
     border-radius: 4px;
+   width: 180px;
+   height: 100px;
 } 
 
 .textcontent-child
@@ -50,20 +54,21 @@ video
 
 @media only screen and (min-width: 768px)
 {
-   .img-head
+  /* .img-head
    {
        display: block;
        width: 100%;
        padding-bottom: 30px;  
        padding-top: 7px;
-       padding-left: 7px;
+       padding-left: 2px;
        padding-right: 7px;  
-   }
+   }*/
    .wrapper
 {
    width:600px;
    margin:0 auto; 
 }
+
 }
 @media only screen and (min-width: 1000px)
  {
@@ -71,10 +76,30 @@ video
 {
 	width:1000px;
 } 
-.img-head
+/*.img-head
 {  
 	width: 100%;
-}
+}*/
+.videocontent-child
+{
+    display: block;
+    width: 40%; 
+    /*border: dotted 2px chocolate;*/
+    border-radius: 4px;
+    /*padding: 12px;*/
+    margin-top: 3px;
+    margin-left: 3px;
+    float: left;
+} 
+
+video
+{
+    border-radius: 4px;
+   width: 180px;
+   height: 100px;
+} 
+
+
  }
 
 
