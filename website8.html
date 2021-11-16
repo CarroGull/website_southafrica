@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+ 
+  *{
+    background-color: #3a979f;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: auto;
+  }
+
+  .navmovies {
+    margin: 0;
+    padding: 0;  
+    border: dotted 3px black;
+  }
+  
+  .navmovies li {
+    display: block;  /* inline-block gör att de lägger sig bredvid varandra. "block" att de lägger sig under varandra*/
+    border: dotted 2px purple;
+
+  }
+
+  .navtext li {
+    display: block;  
+    /* inline-block gör att de lägger sig bredvid varandra. "block" att de lägger sig under varandra*/
+   
+  }
+
+  .textaside {
+    display: block; 
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    float: right;
+    margin-left: 20px;
+
+  }
+
+  video{
+      
+      width: 70%;
+      height: 70%;
+      margin-top: 5px;
+      margin-left: 5px;
+      border-radius: 5px;
+      
+    }
+
+
+  </style>
+  </head>
+  <body>
+  
+  <ul class="navmovies">
+    
+
+  <!--  <li><video src="southafrica/website_southafrica/video/sputum.mp4" alt="sputum" controls></video></li>
+    <li><video src="southafrica/website_southafrica/video/nutrition6.mp4" alt="nutrition6" controls></video>download</li> 
+    <li><video src="southafrica/website_southafrica/video/sputum.mp4"  alt="sputum" controls></video></li>  
+    <li><video src="southafrica/website_southafrica/video/nutrition6.mp4" alt="nutrition6" controls></video></li>
+  -->    
+  </ul>
+
+  <button id="button">download film</button>
+
+  <a id="sputum" download="sputum.mp4"></a>
+  <script> 
+
+  var button = document.getElementById("button");  /*kan vara fel citattecken. originalet är "enkla streck"*/
+  button.addEventListener("click", function(e)
+  {
+
+    
+    var sputum = document.getElementById("sputum").value 
+
+    var filename = "sputum.mp4"
+
+    download(sputum, filename)
+})
+
+function download(sputum, filename) 
+{
+    var element = document.createElement("a")
+
+    element.setAttribute("href", "data:movie/plain;charset=utf-8, " + encodeURIComponent(sputum))
+    
+    element.setAttribute("download", filename)
+     
+    element.style.display  = "none"
+
+    document.body.appendChild(element)
+
+    element.click()
+
+    document.body.removeChild(element)
+}
+
+/*  Denna stödjer förmodligen endast online, pga. URL 
+
+  const testbild = document.getElementById("sputum");
+  const blob1 = new Blob(["hello", "download"],  { type: "video/plain" });
+  sputum.href = URL.createObjectURL(blob1); */   
+
+
+  </script>
+  
+
+</body>
+</html>
+
+
+<!--
+
+  <style>
+  .nav {
+    background-color: yellow; 
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <h1>Horizontal Navigation Links</h1>
+  <p>By default, list items are displayed vertically. In this example we use display: inline-block to display them horizontally (side by side).</p>
+  <p>Note: If you resize the browser window, the links will automatically break when it becomes too crowded.</p>
+  
+
+  <ul class="nav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#clients">Our Clients</a></li>  
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+
+  
+-->
